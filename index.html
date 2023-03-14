@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password generator</title>
+</head>
+
+<body onload="generatePass()">
+    <h1>Password generator</h1>
+    <div id="container">
+        <div id="box">
+            <p id="pass-box"></p>
+
+            <div id="row-container">
+                <div id="row">
+                    <p>Password length</p>
+                    <div id="button-group">
+                        <button id="decrement" onclick="stepper(this)"> - </button>
+                        <input type="number" id="total-char" max="25" min="6" value="10" step="1">
+                        <button id="increment" onclick="stepper(this)"> + </button>
+                    </div>
+                </div>
+                <div id="row">
+                    <label for="lower-case">Includes Lowercase</label>
+                    <input type="checkbox" id="lower-case" checked />
+                </div>
+                <div id="row">
+                    <label for="upper-case">Includes Uppercase</label>
+                    <input type="checkbox" id="upper-case"/>
+                </div>
+    
+                <div id="row">
+                    <label for="numbers">Includes Numbers</label>
+                    <input type="checkbox" id="numbers" />
+                </div>
+                <div id="row">
+                    <label for="symbols">Includes Symbols</label>
+                    <input type="checkbox" id="symbols" />
+                </div>
+            </div>
+
+            <button id="button" onclick="generatePass()">
+                Generate Password
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
